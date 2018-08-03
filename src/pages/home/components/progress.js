@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
 
-const Progress = ({ classes, percent, primaryColor, secondaryColor }) => (
+const Progress = ({ classes, percent, showPercent, primaryColor, secondaryColor }) => (
   <div className={classes.container} style={{backgroundColor: secondaryColor}}>
     <div className={classes.progress} style={{ width: `${percent}%`, backgroundColor: primaryColor }}>
-      <p className={classes.text}>{`${percent}%`}</p>
+      {showPercent && <p className={classes.text}>{`${percent}%`}</p>}
     </div>
   </div>
 );
