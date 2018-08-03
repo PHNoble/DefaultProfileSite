@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Typography from '@material-ui/core/Typography';
+import Progress from './progress'
 const Attributes = ({classes}) => {
     return(
         <div className={classes.attributesContainer}>
