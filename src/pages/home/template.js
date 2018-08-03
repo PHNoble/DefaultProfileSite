@@ -5,6 +5,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Attributes from './components/attributes';
 import Skills from './components/skills';
+import Languages from './components/languages';
+import WorkExperience from './components/workexperience';
 
 class HomeTemplate extends Component {
     constructor(props) {
@@ -17,19 +19,19 @@ class HomeTemplate extends Component {
             <div className={classes.container}>
                 <div className={classes.leftContainer}>
                     <Paper className={classes.profilePaper}>
-                        <paper className={classes.imgNameContainer}>
-                            
+                        <Paper className={classes.imgNameContainer}>
                             <Typography variant="display1" component="h1" className={classes.name}>Davis Crawford</Typography>
-                        </paper>
+                        </Paper>
                         <Attributes />
                         <hr className={classes.divider}/>
+                        <Skills />
+                        <hr className={classes.divider}/>
+                        <Languages />
                     </Paper>
                 </div>
                 <div className={classes.rightContainer}>
-                    <Paper className={classes.contentPaper}>
-                        <text> asdasdadsa d</text>
-                    </Paper>
-                </div>
+                    <WorkExperience />
+                </div>  
             </div>
         );
     }
@@ -57,15 +59,10 @@ const styles = theme => ({
         margin: 10,
         height: '100%'
     },
-    contentPaper: {
-        flex: 1,
-        padding: 10,
-        margin: 10
-    },
     imgNameContainer: {
         textAlign: 'left',
         width: '100%',
-        backgroundImage: `url(http://www.stickpng.com/assets/images/5845cd430b2a3b54fdbaecf8.png)`
+        backgroundImage: `url("http://www.stickpng.com/assets/images/5845cd430b2a3b54fdbaecf8.png")`
     },
     img: {
         width: '100%',
