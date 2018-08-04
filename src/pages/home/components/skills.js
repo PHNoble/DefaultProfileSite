@@ -6,8 +6,8 @@ const Skills = ({classes}) => {
     return(
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="star" color="green" />
-                <Typography className={classes.title} component="h2">Skills</Typography>
+                <FontAwesomeIcon icon="star" className="icon"/>
+                <Typography variant="display1" className={classes.title} component="h2">Skills</Typography>
             </div>
         </div>
     );
@@ -28,8 +28,10 @@ const styles = theme => ({
     },
     title: {
         fontSize: 20,
-        color: '#666666',
         marginLeft: 10
+    },
+    icon: {
+        
     }
 })
 

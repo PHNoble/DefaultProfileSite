@@ -7,7 +7,7 @@ const Languages = ({classes}) => {
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
                 <FontAwesomeIcon icon="terminal" color="green" />
-                <Typography className={classes.title} component="h2">Programming Languages</Typography>
+                <Typography variant="display1" className={classes.title} component="h2" color="textSecondary">Programming Languages</Typography>
             </div>
         </div>
     );
@@ -28,7 +28,6 @@ const styles = theme => ({
     },
     title: {
         fontSize: 20,
-        color: '#666666',
         marginLeft: 10
     }
 })

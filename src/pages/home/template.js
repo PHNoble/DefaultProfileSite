@@ -14,13 +14,25 @@ class HomeTemplate extends Component {
     }
 
     render() {
+        const experience = [
+            {
+                Title: "CTO",
+                Organization: "Outlit inc.",
+                dates: {
+                    start: "July 2017",
+                    end: "August 2018"
+                },
+                description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
+            }
+        ]
         const {classes} = this.props;
+        console.log(this.props)
         return(
             <div className={classes.container}>
                 <div className={classes.leftContainer}>
                     <Paper className={classes.profilePaper}>
                         <Paper className={classes.imgNameContainer}>
-                            <Typography variant="display1" component="h1" className={classes.name}>Davis Crawford</Typography>
+                            <Typography color="textPrimary" variant="headline" component="h1" className={classes.name}>Davis Crawford</Typography>
                         </Paper>
                         <Attributes />
                         <hr className={classes.divider}/>
@@ -30,7 +42,7 @@ class HomeTemplate extends Component {
                     </Paper>
                 </div>
                 <div className={classes.rightContainer}>
-                    <WorkExperience />
+                    <WorkExperience experience={experience}/>
                 </div>  
             </div>
         );
@@ -50,7 +62,6 @@ const styles = theme => ({
         marginLeft: 10,
     },
     rightContainer: {
-        display: 'flex',
         flex: 2,
         marginRight: 10,
     },
@@ -70,8 +81,6 @@ const styles = theme => ({
     name: {
         marginLeft: 10,
         marginRight: 10,
-        color: 'black',
-        textShadowColor: 'white',
         fontSize: 24,
     },
     attributesContainer: {
