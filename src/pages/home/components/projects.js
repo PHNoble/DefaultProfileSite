@@ -5,32 +5,19 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider'
 
-const WorkExperience = ({classes, experience}) => {
+const Projects = ({classes, projects}) => {
     return(
         <Paper className={classes.contentPaper}>
             <div className={classes.grouping}>
-                <FontAwesomeIcon icon="briefcase" size="2x"/>
-                <Typography color="textSecondary" variant="display1" className={classes.heading} component="h2">Work Experience</Typography>
+                <FontAwesomeIcon icon="project-diagram" size="2x"/>
+                <Typography color="textSecondary" variant="display1" className={classes.heading} component="h2">Projects</Typography>
             </div>
             {
-                experience.map(exp => {
+                projects.map(exp => {
                     return (
                         <div className={classes.col}>
                             <div className={classes.minorGrouping}>
                                 <Typography color="textPrimary" variant="display1" className={classes.title} component="h3">{exp.title}</Typography>
-                                <Typography color="textSecondary" variant="display1" className={classes.org} component="h3">at {exp.organization}</Typography>
-                            </div>
-                            <div className={classes.minorGrouping}>
-                                <FontAwesomeIcon icon="calendar-alt" className={classes.icon}/>
-                                <Typography color="textPrimary" variant="display1" className={classes.date} component="h3">{exp.dates.start} - </Typography>
-                                {exp.dates.end && 
-                                    <Typography color="textPrimary" variant="display1" className={classes.date} component="h3">{exp.dates.end}</Typography>
-                                }
-                                {!exp.dates.end && 
-                                    <div className={classes.currentDiv}>
-                                        <Typography variant="display1" className={classes.current} component="h3">Current</Typography>
-                                    </div>
-                                }
                             </div>
                             <p className={classes.description}> 
                                 {exp.description}
@@ -105,4 +92,4 @@ const styles = theme => ({
     }
 })
 
-export default withStyles(styles)(WorkExperience);
+export default withStyles(styles)(Projects);

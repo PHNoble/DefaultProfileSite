@@ -9,6 +9,9 @@ import Skills from "./components/skills";
 import pepe from "../../assets/pepe.png";
 import Languages from './components/languages';
 import WorkExperience from './components/workexperience';
+import Education from './components/education';
+import Bio from './components/bio';
+import Projects from './components/projects'
 
 class HomeTemplate extends Component {
   constructor(props) {
@@ -16,6 +19,20 @@ class HomeTemplate extends Component {
   }
 
     render() {
+        const projects = [
+            {
+                title: "Resume default template",
+                description: "this is a resume template created for scrubs who cannot webdev"
+            },
+            {
+                title: "Resume default template",
+                description: "this is a resume template created for scrubs who cannot webdev"
+            },
+            {
+                title: "Resume default template",
+                description: "this is a resume template created for scrubs who cannot webdev"
+            }
+        ]
         const experience = [
             {
                 title: "CTO",
@@ -35,6 +52,17 @@ class HomeTemplate extends Component {
                 description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
             }
         ]
+        const education = [
+            {
+                award: "Bachelors in Computer Science",
+                organization: "Virginia Tech",
+                dates: {
+                    start: "August 2016",
+                },
+                description: ""
+            }
+        ]
+        const bio = "REEEEEEEEEEEEEEE ajsdjkaskjdklasjdlk anksdnkjasn dkjnakjsdnkj anskdjnaksd kjaskdjnakj sndkjasdkj akjsndkja nskjd assjsjajsndnaks jasjkd kjasdjkh jshdk jasjd asdkj akjsdhk jasdkj h"
         const {classes} = this.props;
         console.log(this.props)
         return(
@@ -54,7 +82,10 @@ class HomeTemplate extends Component {
                     </Paper>
                 </div>
                 <div className={classes.rightContainer}>
+                    <Bio bio={bio} />
                     <WorkExperience experience={experience}/>
+                    <Education education={education} />
+                    <Projects projects={projects} />
                 </div>  
             </div>
         );
