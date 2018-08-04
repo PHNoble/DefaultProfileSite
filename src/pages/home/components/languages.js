@@ -7,7 +7,7 @@ const Languages = ({classes}) => {
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
                 <FontAwesomeIcon icon="terminal" color="green" />
-                <Typography variant="display1" className={classes.title} component="h2" color="textSecondary">Programming Languages</Typography>
+                <Typography variant="display1" className={classes.title} component="h2" color="textSecondary">Programming <br/> Languages</Typography>
             </div>
         </div>
     );

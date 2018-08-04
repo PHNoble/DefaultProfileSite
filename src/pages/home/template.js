@@ -1,26 +1,36 @@
-import React, {Component} from 'react';
-import {withStyles} from '@material-ui/core/styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Attributes from './components/attributes';
-import Skills from './components/skills';
+import React, { Component } from "react";
+import { withStyles } from "@material-ui/core/styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Paper from "@material-ui/core/Paper";
+import Divider from "@material-ui/core/Divider";
+import Typography from "@material-ui/core/Typography";
+import Attributes from "./components/attributes";
+import Skills from "./components/skills";
+import pepe from "../../assets/pepe.png";
 import Languages from './components/languages';
 import WorkExperience from './components/workexperience';
 
 class HomeTemplate extends Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
     render() {
         const experience = [
             {
-                Title: "CTO",
-                Organization: "Outlit inc.",
+                title: "CTO",
+                organization: "Outlit inc.",
                 dates: {
                     start: "July 2017",
                     end: "August 2018"
+                },
+                description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
+            },
+            {
+                title: "faggot",
+                organization: "gay inc.",
+                dates: {
+                    start: "July 2017"
                 },
                 description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
             }
@@ -32,12 +42,14 @@ class HomeTemplate extends Component {
                 <div className={classes.leftContainer}>
                     <Paper className={classes.profilePaper}>
                         <Paper className={classes.imgNameContainer}>
-                            <Typography color="textPrimary" variant="headline" component="h1" className={classes.name}>Davis Crawford</Typography>
+                            <span className={classes.spanName}>
+                                <Typography color="textPrimary" variant="headline" component="h1" className={classes.name}>Davis Crawford</Typography>
+                            </span>
                         </Paper>
                         <Attributes />
-                        <hr className={classes.divider}/>
+                        <Divider className={classes.divider}/>
                         <Skills />
-                        <hr className={classes.divider}/>
+                        <Divider className={classes.divider}/>
                         <Languages />
                     </Paper>
                 </div>
@@ -58,7 +70,7 @@ const styles = theme => ({
     },
     leftContainer: {
         display: 'flex',
-        flex: 1,
+        
         marginLeft: 10,
     },
     rightContainer: {
@@ -71,10 +83,14 @@ const styles = theme => ({
         height: '100%'
     },
     imgNameContainer: {
-        textAlign: 'left',
-        width: '100%',
-        backgroundImage: `url("http://www.stickpng.com/assets/images/5845cd430b2a3b54fdbaecf8.png")`
-    },
+        position: 'relative',
+        textAlign: "left",
+        width: "100%",
+        height: 200,
+        backgroundImage: `url(${pepe})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain"
+      },
     img: {
         width: '100%',
     },
@@ -94,11 +110,15 @@ const styles = theme => ({
         flexDirection: 'row',
         paddingTop: 10
     },
+    spanName: {
+        position: 'absolute',
+        bottom: 0
+    },
     divider: {
         margin: 10,
         marginTop: 20,
         marginBottom: 20,
     }
 })
-
-export default withStyles(styles)(HomeTemplate)
+  
+export default withStyles(styles)(HomeTemplate);
