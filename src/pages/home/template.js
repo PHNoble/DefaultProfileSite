@@ -9,6 +9,8 @@ import Skills from "./components/skills";
 import pepe from "../../assets/pepe.png";
 import Languages from './components/languages';
 import WorkExperience from './components/workexperience';
+import Education from './components/education';
+import Bio from './components/bio'
 
 class HomeTemplate extends Component {
   constructor(props) {
@@ -35,6 +37,17 @@ class HomeTemplate extends Component {
                 description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
             }
         ]
+        const education = [
+            {
+                award: "Bachelors in Computer Science",
+                organization: "Virginia Tech",
+                dates: {
+                    start: "August 2016",
+                },
+                description: ""
+            }
+        ]
+        const bio = "REEEEEEEEEEEEEEE ajsdjkaskjdklasjdlk anksdnkjasn dkjnakjsdnkj anskdjnaksd kjaskdjnakj sndkjasdkj akjsndkja nskjd assjsjajsndnaks jasjkd kjasdjkh jshdk jasjd asdkj akjsdhk jasdkj h"
         const {classes} = this.props;
         console.log(this.props)
         return(
@@ -55,6 +68,8 @@ class HomeTemplate extends Component {
                 </div>
                 <div className={classes.rightContainer}>
                     <WorkExperience experience={experience}/>
+                    <Education education={education} />
+                    <Bio bio={bio} />
                 </div>  
             </div>
         );
