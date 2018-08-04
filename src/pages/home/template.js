@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Attributes from "./components/attributes";
 import Skills from "./components/skills";
+import pepe from "../../assets/pepe.png";
 
 class HomeTemplate extends Component {
   constructor(props) {
@@ -17,15 +18,17 @@ class HomeTemplate extends Component {
       <div className={classes.container}>
         <div className={classes.leftContainer}>
           <Paper className={classes.profilePaper}>
-            <paper className={classes.imgNameContainer}>
-              <Typography
-                variant="display1"
-                component="h1"
-                className={classes.name}
-              >
-                Davis Crawford
-              </Typography>
-            </paper>
+            <Paper className={classes.imgNameContainer}>
+              <span className={classes.spanName}>
+                <Typography
+                  variant="display1"
+                  component="h1"
+                  className={classes.name}
+                >
+                  Davis Crawford
+                </Typography>
+              </span>
+            </Paper>
             <Attributes />
             <hr className={classes.divider} />
           </Paper>
@@ -68,20 +71,24 @@ const styles = theme => ({
     margin: 10
   },
   imgNameContainer: {
+    position: 'relative',
     textAlign: "left",
     width: "100%",
-    backgroundImage:
-      'url("http://www.stickpng.com/assets/images/5845cd430b2a3b54fdbaecf8.png")'
+    height: 200,
+    backgroundImage: `url(${pepe})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "contain"
   },
-  img: {
-    width: "100%"
+  spanName: {
+    position: 'absolute',
+    bottom: 0
   },
   name: {
     marginLeft: 10,
     marginRight: 10,
     color: "black",
     textShadowColor: "white",
-    fontSize: 24
+    fontSize: 24,
   },
   attributesContainer: {
     marginLeft: 10,
