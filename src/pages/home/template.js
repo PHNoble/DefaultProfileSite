@@ -10,7 +10,8 @@ import pepe from "../../assets/pepe.png";
 import Languages from './components/languages';
 import WorkExperience from './components/workexperience';
 import Education from './components/education';
-import Bio from './components/bio'
+import Bio from './components/bio';
+import Projects from './components/projects'
 
 class HomeTemplate extends Component {
   constructor(props) {
@@ -18,6 +19,20 @@ class HomeTemplate extends Component {
   }
 
     render() {
+        const projects = [
+            {
+                title: "Resume default template",
+                description: "this is a resume template created for scrubs who cannot webdev"
+            },
+            {
+                title: "Resume default template",
+                description: "this is a resume template created for scrubs who cannot webdev"
+            },
+            {
+                title: "Resume default template",
+                description: "this is a resume template created for scrubs who cannot webdev"
+            }
+        ]
         const experience = [
             {
                 title: "CTO",
@@ -67,9 +82,10 @@ class HomeTemplate extends Component {
                     </Paper>
                 </div>
                 <div className={classes.rightContainer}>
+                    <Bio bio={bio} />
                     <WorkExperience experience={experience}/>
                     <Education education={education} />
-                    <Bio bio={bio} />
+                    <Projects projects={projects} />
                 </div>  
             </div>
         );

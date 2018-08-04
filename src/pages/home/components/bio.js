@@ -12,7 +12,7 @@ const Bio = ({classes, bio}) => {
                 <FontAwesomeIcon icon="book" size="2x"/>
                 <Typography color="textSecondary" variant="display1" className={classes.heading} component="h2">Bio</Typography>
             </div>
-            
+            <Typography variant="body2" component="p">{bio}</Typography>
         </Paper>
     );
 }
