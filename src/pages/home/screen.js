@@ -28,7 +28,7 @@ class Home extends Component {
             email={Info.email}
             phone={Info.phone}
             skills={Info.skills}
-            programming_languages={Info.programming_languages}
+            programingLanguages={Info.programing_languages}
             projects={Info.projects}
             />
         )

@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Typography from '@material-ui/core/Typography';
-const Languages = ({classes}) => {
+import Progress from './progress';
+
+const Languages = ({classes, programingLanguages}) => {
     return(
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
@@ -11,6 +13,18 @@ const Languages = ({classes}) => {
                     Programming <br/> Languages
                 </Typography>
             </div>
+            {
+                programingLanguages.map(lang => {
+                    return(
+                        <div>
+                            <Typography className={classes.skill} color={"textSecondary"} variant="subheading" component="p">
+                                {lang.language}
+                            </Typography>
+                            <Progress percent={lang.experience}/>
+                        </div>
+                    )
+                })
+            }
         </div>
     );
 }
