@@ -1,41 +1,40 @@
 import axios from "axios";
 
 export const getUserPublicData = username => {
-  axios({
+  return axios({
     method: "GET",
     url: `https://api.github.com/users/${username}`
   })
     .then(response => {
-      console.log(response);
+      return response.data;
     })
     .catch(err => {
-      return {}
+      return {};
     });
 };
 
 export const getUserRepos = username => {
-  axios({
+  return axios({
     method: "GET",
     url: `https://api.github.com/users/${username}/repos`
   })
     .then(response => {
-      console.log(response);
+      return response;
     })
     .catch(err => {
-      return []
+      return [];
     });
 };
 
 export const getCommitActivity = (username, repo) => {
-    axios({
-      method: "GET",
-      url: `https://api.github.com/repos/${username}/${repo}/stats/participation`
+  return axios({
+    method: "GET",
+    url: `https://api.github.com/repos/${username}/${repo}/stats/participation`
+  })
+    .then(response => {
+      return response;
     })
-      .then(response => {
-        console.log(response);
-      })
-      .catch(err => {
-        return {}
-      });
-  };
-  
+    .catch(err => {
+      return {};
+    });
+};

@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Typography from '@material-ui/core/Typography';
-const Skills = ({classes}) => {
+const Languages = ({classes}) => {
     return(
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="star" className="icon"/>
-                <Typography variant="display1" className={classes.title} component="h2">Skills</Typography>
+                <FontAwesomeIcon icon="terminal" color="green" />
+                <Typography variant="display1" className={classes.title} component="h2" color="textSecondary">Programming <br/> Languages</Typography>
             </div>
         </div>
     );
@@ -24,15 +24,12 @@ const styles = theme => ({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        textAlign: 'center'
+        textAlign: 'left'
     },
     title: {
         fontSize: 20,
         marginLeft: 10
-    },
-    icon: {
-        
     }
 })
 
-export default withStyles(styles)(Skills);
+export default withStyles(styles)(Languages);

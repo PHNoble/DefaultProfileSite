@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({
+import GitReducer from './gitreducer'
 
+export default combineReducers({
+    git: GitReducer
 });

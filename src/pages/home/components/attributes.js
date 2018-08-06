@@ -7,16 +7,20 @@ const Attributes = ({classes}) => {
     return(
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="toolbox"/> <Typography component="p">asdasd</Typography>
+                <FontAwesomeIcon icon="toolbox" className={classes.icon}/> 
+                <Typography component="p">asdasd</Typography>
             </div>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="home"/> <text>asdasd</text>
+                <FontAwesomeIcon icon="home" className={classes.icon}/> 
+                <Typography component="p">asdasd</Typography>
             </div>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="envelope"/> <text>asdasd</text>
+                <FontAwesomeIcon icon="envelope" className={classes.icon}/> 
+                <Typography component="p">asdasd</Typography>
             </div>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="phone"/> <text>asdasd</text>
+                <FontAwesomeIcon icon="phone" className={classes.icon} flip="horizontal"/> 
+                <Typography component="p">asdasd</Typography>
             </div>
         </div>
     );
@@ -32,7 +36,11 @@ const styles = theme => ({
     attribute: {
         display: 'flex',
         flexDirection: 'row',
-        paddingTop: 10
+        paddingTop: 10,
+        alignItems: 'center',
+    },
+    icon: {
+        padding: 5
     }
 })
 

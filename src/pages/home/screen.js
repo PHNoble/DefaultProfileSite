@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 import HomeTemplate from './template';
+import { connect } from "react-redux";
+import { getData } from '../../reducers/gitreducer';
 
-export default class Home extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
+    }
+
+    componentWillMount() {
+        this.props.getData('christerence')
     }
 
     render() {
@@ -12,3 +18,13 @@ export default class Home extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+
+});
+
+const mapDispatchToProps = {
+    getData,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
