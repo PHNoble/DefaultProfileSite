@@ -44,8 +44,8 @@ class HomeTemplate extends Component {
                 description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
             },
             {
-                title: "faggot",
-                organization: "gay inc.",
+                title: "person",
+                organization: "the guy inc.",
                 dates: {
                     start: "July 2017"
                 },
