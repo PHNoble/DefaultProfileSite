@@ -6,8 +6,10 @@ const Languages = ({classes}) => {
     return(
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="terminal" color="green" />
-                <Typography variant="display1" className={classes.title} component="h2" color="textSecondary">Programming <br/> Languages</Typography>
+                <FontAwesomeIcon icon="terminal"  />
+                <Typography className={classes.title} color={"textPrimary"} variant="display1" component="h2">
+                    Programming <br/> Languages
+                </Typography>
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import HomeTemplate from './template';
 import { connect } from "react-redux";
 import { getData } from '../../reducers/gitreducer';
+import Info from '../../assets/info.json';
 
 class Home extends Component {
     constructor(props) {
@@ -9,13 +10,27 @@ class Home extends Component {
     }
 
     componentWillMount() {
-        this.props.getData('christerence')
+        this.props.getData(Info.github)
     }
 
     render() {
         const { details, repos } = this.props;
         return (
-            <HomeTemplate details={details} repos={repos}/>
+            <HomeTemplate 
+            details={details}
+            repos={repos} 
+            experience={Info.experience} 
+            education={Info.education} 
+            bio={Info.bio}
+            name={Info.name}
+            position={Info.position}
+            home={Info.home}
+            email={Info.email}
+            phone={Info.phone}
+            skills={Info.skills}
+            programming_languages={Info.programming_languages}
+            projects={Info.projects}
+            />
         )
     }
 }

@@ -3,24 +3,32 @@ import {withStyles} from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Typography from '@material-ui/core/Typography';
 import Progress from './progress'
-const Attributes = ({classes}) => {
+const Attributes = ({classes, info, position, home, email, phone}) => {
     return(
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
                 <FontAwesomeIcon icon="toolbox" className={classes.icon}/> 
-                <Typography component="p">asdasd</Typography>
+                <Typography className={classes.attr} color={"textSecondary"} variant="subheading" component="p">
+                    {position}
+                </Typography>
             </div>
             <div className={classes.attribute}>
                 <FontAwesomeIcon icon="home" className={classes.icon}/> 
-                <Typography component="p">asdasd</Typography>
+                <Typography className={classes.attr} color={"textSecondary"} variant="subheading" component="p">
+                    {home}
+                </Typography>
             </div>
             <div className={classes.attribute}>
                 <FontAwesomeIcon icon="envelope" className={classes.icon}/> 
-                <Typography component="p">asdasd</Typography>
+                <Typography className={classes.attr} color={"textSecondary"} variant="subheading" component="p">
+                    {email}
+                </Typography>
             </div>
             <div className={classes.attribute}>
                 <FontAwesomeIcon icon="phone" className={classes.icon} flip="horizontal"/> 
-                <Typography component="p">asdasd</Typography>
+                <Typography className={classes.attr} color={"textSecondary"} variant="subheading" component="p">
+                    {phone}
+                </Typography>
             </div>
         </div>
     );
@@ -38,6 +46,9 @@ const styles = theme => ({
         flexDirection: 'row',
         paddingTop: 10,
         alignItems: 'center',
+    },
+    attr: {
+        fontSize: 12
     },
     icon: {
         padding: 5

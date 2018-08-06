@@ -1,0 +1,88 @@
+{
+    "name": "Paul Noble",
+    "position": "Software Engineer",
+    "home": "Blacksburg, VA",
+    "email": "npaul98@vt.edu",
+    "github": "PHNoble",
+    "phone": "(757)775-1700",
+    "skills": [
+        "Microsoft Office",
+        "Design",
+        "Something else"
+    ],
+    "programing_languages": [
+        {
+            "language": "Javascript",
+            "experience": 50
+        },
+        {
+            "language": "Java",
+            "experience": 60
+        },
+        {
+            "language": "C",
+            "experience": 20
+        }
+    ],
+    "experience": [
+        {
+            "title": "IT College to Corporate Intern",
+            "organization": "Vanguard",
+            "dates": {
+                "start": "May 2018",
+                "end": "July 2018"
+            },
+            "description": "Worked in the International Corporate Services (ICS) branch of Vanguard to develope an AWS solution for ingesting and delivering website user data to corporate analysts. AWS technologies used include: AWS Elastic Map Reduce (Using the Hadoop filesystem), AWS EC2, AWS Cloud formation, AWS Buckets, and AWS security rules/profiles"
+        },
+        {
+            "title": "IT TLP Intern",
+            "organization": "Optum/United Health Group",
+            "dates": {
+                "start": "May 2017",
+                "end": "August 2017"
+            },
+            "description": "Worked in a team of interns developing a mechanism of drug delivery for disaster relief scenarios with a remote drone and mobile application. Developed an API with node that interfaced with a mobile and webapp to command a remote drone. Technologies used: React Native and MEAN stack."
+        }
+    ],
+    "education": [
+        {
+            "award": "Bachelors of Science: Computer Science",
+            "organization": "Virginia Tech",
+            "dates" :{
+                "start": "August 2016"
+            },
+            "description": ""
+        },
+        {
+            "award": "Minor in Entrepreneurship and New Venture Growth",
+            "organization": "Virginia Tech",
+            "dates" :{
+                "start": "August 2018"
+            },
+            "description": ""
+        },
+        {
+            "award": "Minor in Math",
+            "organization": "Virginia Tech",
+            "dates" :{
+                "start": "August 2018"
+            },
+            "description": ""
+        }
+    ],
+    "projects": [
+        {
+            "title": "Resume default template",
+            "description": "this is a resume template created for scrubs who cannot webdev"
+        },
+        {
+            "title": "Resume default template",
+            "description": "this is a resume template created for scrubs who cannot webdev"
+        },
+        {
+            "title": "Resume default template",
+            "description": "this is a resume template created for scrubs who cannot webdev"
+        } 
+    ],
+    "bio": "Hi my name is Paul Noble and I am a current Computer Science student at Virginia Tech also pursuing a minors in Entrepreneurship and New Venture Growth and Math. I am interested in entrepreneurship, mobile developement, and data science. "
+}

@@ -15,56 +15,15 @@ import Projects from './components/projects'
 import Github from './components/github';
 import { isEmpty } from 'lodash'
 
+
+
 class HomeTemplate extends Component {
   constructor(props) {
     super(props);
   }
 
     render() {
-        const projects = [
-            {
-                title: "Resume default template",
-                description: "this is a resume template created for scrubs who cannot webdev"
-            },
-            {
-                title: "Resume default template",
-                description: "this is a resume template created for scrubs who cannot webdev"
-            },
-            {
-                title: "Resume default template",
-                description: "this is a resume template created for scrubs who cannot webdev"
-            }
-        ]
-        const experience = [
-            {
-                title: "CTO",
-                organization: "Outlit inc.",
-                dates: {
-                    start: "July 2017",
-                    end: "August 2018"
-                },
-                description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
-            },
-            {
-                title: "person",
-                organization: "the guy inc.",
-                dates: {
-                    start: "July 2017"
-                },
-                description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
-            }
-        ]
-        const education = [
-            {
-                award: "Bachelors in Computer Science",
-                organization: "Virginia Tech",
-                dates: {
-                    start: "August 2016",
-                },
-                description: ""
-            }
-        ]
-        const bio = "REEEEEEEEEEEEEEE ajsdjkaskjdklasjdlk anksdnkjasn dkjnakjsdnkj anskdjnaksd kjaskdjnakj sndkjasdkj akjsndkja nskjd assjsjajsndnaks jasjkd kjasdjkh jshdk jasjd asdkj akjsdhk jasdkj h"
+        const {experience, education, bio, name, skills, position, home, email, phone, programming_languages, projects} = this.props
         const {classes, details, repos} = this.props;
         return(
             <div className={classes.container}>
@@ -72,14 +31,19 @@ class HomeTemplate extends Component {
                     <Paper className={classes.profilePaper}>
                         <Paper className={classes.imgNameContainer}>
                             <span className={classes.spanName}>
-                                <Typography color="textPrimary" variant="headline" component="h1" className={classes.name}>Davis Crawford</Typography>
+                                <Typography color="textPrimary" variant="headline" component="h1" className={classes.name}>{name}</Typography>
                             </span>
                         </Paper>
-                        <Attributes />
+                        <Attributes 
+                            position={position}
+                            home={home}
+                            email={email}
+                            phone={phone}
+                        />
                         <Divider className={classes.divider}/>
-                        <Skills />
+                        <Languages programmingLnaguages={programming_languages}/>
                         <Divider className={classes.divider}/>
-                        <Languages />
+                        <Skills skills={skills}/>
                     </Paper>
                 </div>
                 <div className={classes.rightContainer}>
