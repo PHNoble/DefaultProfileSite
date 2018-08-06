@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './pages/home/screen';
+import { Provider } from "react-redux";
+import store from './store';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStroopwafel, faToolbox, faCoffee, faHome, faEnvelope, faPhone, faStar, faGlobe, faTerminal, faBriefcase, faCalendarAlt, faGraduationCap, faBook, faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
@@ -11,7 +13,9 @@ library.add(faStroopwafel, faToolbox, faCoffee, faHome, faEnvelope, faPhone, faG
 class App extends Component {
   render() {
     return (
-      <Home />
+      <Provider store={store}>
+        <Home />
+      </Provider>
     );
   }
 }
