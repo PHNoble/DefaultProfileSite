@@ -12,6 +12,8 @@ import WorkExperience from './components/workexperience';
 import Education from './components/education';
 import Bio from './components/bio';
 import Projects from './components/projects'
+import Github from './components/github';
+import { isEmpty } from 'lodash'
 
 class HomeTemplate extends Component {
   constructor(props) {
@@ -44,8 +46,8 @@ class HomeTemplate extends Component {
                 description: "A DESCRIPTION OF DUTIES WOULD GO HERE"
             },
             {
-                title: "faggot",
-                organization: "gay inc.",
+                title: "xd",
+                organization: "xdxdxd inc.",
                 dates: {
                     start: "July 2017"
                 },
@@ -63,7 +65,7 @@ class HomeTemplate extends Component {
             }
         ]
         const bio = "REEEEEEEEEEEEEEE ajsdjkaskjdklasjdlk anksdnkjasn dkjnakjsdnkj anskdjnaksd kjaskdjnakj sndkjasdkj akjsndkja nskjd assjsjajsndnaks jasjkd kjasdjkh jshdk jasjd asdkj akjsdhk jasdkj h"
-        const {classes} = this.props;
+        const {classes, details, repos} = this.props;
         return(
             <div className={classes.container}>
                 <div className={classes.leftContainer}>
@@ -85,6 +87,7 @@ class HomeTemplate extends Component {
                     <WorkExperience experience={experience}/>
                     <Education education={education} />
                     <Projects projects={projects} />
+                    {!isEmpty(details) && <Github details={details} repos={repos}/>}
                 </div>  
             </div>
         );

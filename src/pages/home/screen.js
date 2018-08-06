@@ -13,14 +13,16 @@ class Home extends Component {
     }
 
     render() {
+        const { details, repos } = this.props;
         return (
-            <HomeTemplate />
+            <HomeTemplate details={details} repos={repos}/>
         )
     }
 }
 
 const mapStateToProps = state => ({
-
+    details: state.git.details,
+    repos: state.git.repos
 });
 
 const mapDispatchToProps = {

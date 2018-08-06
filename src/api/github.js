@@ -1,4 +1,5 @@
 import axios from "axios";
+import * as utils from "./utils/index";
 
 export const getUserPublicData = username => {
   return axios({
@@ -6,7 +7,7 @@ export const getUserPublicData = username => {
     url: `https://api.github.com/users/${username}`
   })
     .then(response => {
-      return response.data;
+      return utils.parseGit(response.data);
     })
     .catch(err => {
       return {};
@@ -19,7 +20,7 @@ export const getUserRepos = username => {
     url: `https://api.github.com/users/${username}/repos`
   })
     .then(response => {
-      return response;
+      return utils.parseRepos(response.data);
     })
     .catch(err => {
       return [];
@@ -32,7 +33,9 @@ export const getCommitActivity = (username, repo) => {
     url: `https://api.github.com/repos/${username}/${repo}/stats/participation`
   })
     .then(response => {
-      return response;
+      var data = {};
+      data[repo] = response.data;
+      return data;
     })
     .catch(err => {
       return {};
