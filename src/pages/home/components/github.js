@@ -11,7 +11,7 @@ const Github = ({ classes, details, repos, stats }) => {
       <div className={classes.grouping}>
         <FontAwesomeIcon icon="project-diagram" size="2x" />
         <Typography
-          color="textSecondary"
+          color="textPrimary"
           variant="display1"
           className={classes.heading}
           component="h2"

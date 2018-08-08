@@ -10,7 +10,7 @@ const Projects = ({classes, projects}) => {
         <Paper className={classes.contentPaper}>
             <div className={classes.grouping}>
                 <FontAwesomeIcon icon="project-diagram" size="2x"/>
-                <Typography color="textSecondary" variant="display1" className={classes.heading} component="h2">Projects</Typography>
+                <Typography color="textPrimary" variant="display1" className={classes.heading} component="h2">Projects</Typography>
             </div>
             {
                 projects.map(exp => {

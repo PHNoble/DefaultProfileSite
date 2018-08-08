@@ -23,9 +23,9 @@ class HomeTemplate extends Component {
   }
 
     render() {
-        const {experience, education, bio, name, skills, position, home, email, phone, programingLanguages, projects} = this.props
+        const {experience, education, bio, name, skills, position, home, email, phone, programingLanguages, projects, theme} = this.props
         const {classes, details, repos} = this.props;
-        console.log(programingLanguages)
+        console.log(theme)
         return(
             <div className={classes.container}>
                 <div className={classes.leftContainer}>
@@ -35,15 +35,20 @@ class HomeTemplate extends Component {
                                 <Typography color="textPrimary" variant="headline" component="h1" className={classes.name}>{name}</Typography>
                             </span>
                         </Paper>
-                        <Attributes 
+                        <Attributes
+                            theme={theme} 
                             position={position}
                             home={home}
                             email={email}
                             phone={phone}
                         />
                         <Divider className={classes.divider}/>
-                        <Languages programingLanguages={programingLanguages}/>
-                        <Divider className={classes.divider}/>
+                        {programingLanguages &&
+                            <div>
+                                <Languages programingLanguages={programingLanguages}/>
+                                <Divider className={classes.divider}/>
+                            </div>
+                        }
                         <Skills skills={skills}/>
                     </Paper>
                 </div>

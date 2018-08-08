@@ -5,12 +5,14 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider'
 
+import {palette} from '../../../assets/theme.json';
+
 const WorkExperience = ({classes, experience}) => {
     return(
         <Paper className={classes.contentPaper}>
             <div className={classes.grouping}>
-                <FontAwesomeIcon icon="briefcase" size="2x"/>
-                <Typography color="textSecondary" variant="display1" className={classes.heading} component="h2">Work Experience</Typography>
+                <FontAwesomeIcon color={palette.primary.main} icon="briefcase" size="2x"/>
+                <Typography color="textPrimary" variant="display1" className={classes.heading} component="h2">Work Experience</Typography>
             </div>
             {
                 experience.map(exp => {

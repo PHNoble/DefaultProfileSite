@@ -4,12 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Typography from '@material-ui/core/Typography';
 import Progress from './progress';
 
+import {palette} from '../../../assets/theme.json';
+
 const Languages = ({classes, programingLanguages}) => {
     return(
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="terminal"  />
-                <Typography className={classes.title} color={"textPrimary"} variant="display1" component="h2">
+                <FontAwesomeIcon color={palette.primary.main} icon="terminal"  />
+                <Typography className={classes.title} color={"textSecondary"} variant="display1" component="h2">
                     Programming <br/> Languages
                 </Typography>
             </div>
@@ -17,12 +19,12 @@ const Languages = ({classes, programingLanguages}) => {
                 programingLanguages.map(lang => {
                     return(
                         <div>
-                            <Typography className={classes.skill} color={"textSecondary"} variant="subheading" component="p">
+                            <Typography className={classes.skill} color={"textPrimary"} variant="subheading" component="p">
                                 {lang.language}
                             </Typography>
-                            <Progress percent={lang.experience}/>
+                            <Progress primaryColor={palette.primary.main} percent={lang.experience}/>
                         </div>
-                    )
+                    );
                 })
             }
         </div>

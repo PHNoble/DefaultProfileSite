@@ -2,19 +2,22 @@ import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Typography from '@material-ui/core/Typography';
+
+import {palette} from '../../../assets/theme.json';
+
 const Skills = ({classes, skills}) => {
     return(
         <div className={classes.attributesContainer}>
             <div className={classes.attribute}>
-                <FontAwesomeIcon icon="star" className="icon"/>
-                <Typography className={classes.title} color={"textPrimary"} variant="display1" component="h2">
+                <FontAwesomeIcon color={palette.primary.main} icon="star" className="icon"/>
+                <Typography className={classes.title} color={"textScondary"} variant="display1" component="h2">
                     Skills
                 </Typography>
             </div>
             {
                 skills.map(skill =>{
                     return(
-                        <Typography className={classes.skill} color={"textSecondary"} variant="subheading" component="p">
+                        <Typography className={classes.skill} color={"textPrimary"} variant="subheading" component="p">
                             {skill}
                         </Typography>
                     )
