@@ -23,9 +23,8 @@ class HomeTemplate extends Component {
   }
 
     render() {
-        const {experience, education, bio, name, skills, position, home, email, phone, programingLanguages, projects} = this.props
+        const {experience, username, education, bio, name, skills, position, home, email, phone, programingLanguages, projects} = this.props
         const {classes, details, repos} = this.props;
-        console.log(programingLanguages)
         return(
             <div className={classes.container}>
                 <div className={classes.leftContainer}>
@@ -52,7 +51,7 @@ class HomeTemplate extends Component {
                     <WorkExperience experience={experience}/>
                     <Education education={education} />
                     <Projects projects={projects} />
-                    {!isEmpty(details) && <Github details={details} repos={repos}/>}
+                    {!isEmpty(details) && <Github details={details} username={username} repos={repos}/>}
                 </div>  
             </div>
         );

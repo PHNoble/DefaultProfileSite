@@ -30,6 +30,7 @@ class Home extends Component {
             skills={Info.skills}
             programingLanguages={Info.programing_languages}
             projects={Info.projects}
+            username={Info.github}
             />
         )
     }

@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 
-const Github = ({ classes, details, repos, stats }) => {
+const Github = ({ classes, details, repos, stats, username }) => {
   return (
     <Paper className={classes.contentPaper}>
       <div className={classes.grouping}>
@@ -42,8 +42,15 @@ const Github = ({ classes, details, repos, stats }) => {
           return (
             <div className={classes.repo}>
               <div className={classes.repoTitle}>
-                <a href={val.url} className={classes.repoName}>{val.name}</a>
+                <a href={val.url} className={classes.repoName}>
+                  {val.name}
+                </a>
                 <p className={classes.repoLanguage}>{`(${val.language})`}</p>
+                {val.owner === username && (
+                  <div className={classes.currentDiv}>
+                    <p className={classes.ownerTag}>owner</p>
+                  </div>
+                )}
               </div>
               <Divider className={classes.divider} />
             </div>
@@ -65,6 +72,19 @@ const styles = theme => ({
     flex: 1,
     marginBottom: 10
   },
+  currentDiv: {
+    backgroundColor: "lightblue",
+    borderRadius: 4,
+    marginLeft: 10,
+    height: 20,
+    padding: 5,
+    display: 'flex',
+    alignItems: 'center',
+  },
+  ownerTag: {
+    fontSize: 14,
+    color: 'white'
+  },
   minorGrouping: {
     display: "inline-flex",
     alignItems: "center",
@@ -74,12 +94,6 @@ const styles = theme => ({
   },
   icon: {
     marginRight: 10
-  },
-  currentDiv: {
-    padding: 5,
-    backgroundColor: "lightblue",
-    borderRadius: 4,
-    marginLeft: 5
   },
   col: {
     display: "flex",
@@ -109,10 +123,6 @@ const styles = theme => ({
   description: {
     fontSize: 12
   },
-  current: {
-    fontSize: 14,
-    color: "white"
-  },
   profilePicture: {
     width: "8%",
     height: "8%",
@@ -125,15 +135,15 @@ const styles = theme => ({
   },
   repoHeading: {
     fontSize: 18,
-    fontWeight: '600'
+    fontWeight: "600"
   },
   repo: {
-    marginLeft: 5,
+    marginLeft: 5
   },
   repoTitle: {
-    display: 'flex',
+    display: "flex",
     flexDirection: "row",
-    alignItems: 'center'
+    alignItems: "center"
   },
   repoName: {
     fontSize: 15,
@@ -144,7 +154,7 @@ const styles = theme => ({
     fontSize: 15,
     color: "#456",
     fontWeight: "600",
-    marginLeft: 5,
+    marginLeft: 5
   },
   divider: {}
 });
