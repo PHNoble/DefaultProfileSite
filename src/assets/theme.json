@@ -1,0 +1,14 @@
+{
+    "palette": {
+        "primary": {
+            "main": "#6191B1"
+        },
+        "secondary": {
+            "main": "#A0A0A0"
+        },
+        "text": {
+            "primary": "#6191B1",
+            "secondary": "#A0A0A0"
+        }
+    }
+}

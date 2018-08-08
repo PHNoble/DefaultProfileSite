@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import HomeTemplate from './template';
 import { connect } from "react-redux";
 import { getData } from '../../reducers/gitreducer';
+import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+
 import Info from '../../assets/info.json';
+import Theme from '../../assets/theme.json';
 
 class Home extends Component {
     constructor(props) {
@@ -14,24 +17,28 @@ class Home extends Component {
     }
 
     render() {
+        const theme = createMuiTheme(Theme);
         const { details, repos } = this.props;
         return (
-            <HomeTemplate 
-            details={details}
-            repos={repos} 
-            experience={Info.experience} 
-            education={Info.education} 
-            bio={Info.bio}
-            name={Info.name}
-            position={Info.position}
-            home={Info.home}
-            email={Info.email}
-            phone={Info.phone}
-            skills={Info.skills}
-            programingLanguages={Info.programing_languages}
-            projects={Info.projects}
-            username={Info.github}
-            />
+            <MuiThemeProvider theme={theme}>
+                <HomeTemplate 
+                    theme={theme}
+                    details={details}
+                    repos={repos} 
+                    experience={Info.experience} 
+                    education={Info.education} 
+                    bio={Info.bio}
+                    name={Info.name}
+                    position={Info.position}
+                    home={Info.home}
+                    email={Info.email}
+                    phone={Info.phone}
+                    skills={Info.skills}
+                    programingLanguages={Info.programing_languages}
+                    projects={Info.projects}
+                    username={Info.github}
+                />
+            </MuiThemeProvider>
         )
     }
 }

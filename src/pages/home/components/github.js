@@ -11,7 +11,7 @@ const Github = ({ classes, details, repos, stats, username }) => {
       <div className={classes.grouping}>
         <FontAwesomeIcon icon="project-diagram" size="2x" />
         <Typography
-          color="textSecondary"
+          color="textPrimary"
           variant="display1"
           className={classes.heading}
           component="h2"
@@ -37,7 +37,7 @@ const Github = ({ classes, details, repos, stats, username }) => {
         <Divider className={classes.divider} />
       </div>
       <div className={classes.repos}>
-        <Typography className={classes.repoHeading}>Public Repos</Typography>
+        <Typography className={classes.repoHeading}>Public Repositories</Typography>
         {repos.map((val, idx) => {
           return (
             <div className={classes.repo}>

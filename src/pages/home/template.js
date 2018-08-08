@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
 import Attributes from "./components/attributes";
 import Skills from "./components/skills";
-import pepe from "../../assets/pepe.png";
+import ProfilePicture from "../../assets/profilepicture.png";
 import Languages from './components/languages';
 import WorkExperience from './components/workexperience';
 import Education from './components/education';
@@ -15,15 +14,12 @@ import Projects from './components/projects'
 import Github from './components/github';
 import { isEmpty } from 'lodash'
 
-
-
 class HomeTemplate extends Component {
   constructor(props) {
     super(props);
   }
-
     render() {
-        const {experience, username, education, bio, name, skills, position, home, email, phone, programingLanguages, projects} = this.props
+        const {experience, username, education, bio, name, skills, position, home, email, phone, programingLanguages, projects, theme} = this.props
         const {classes, details, repos} = this.props;
         return(
             <div className={classes.container}>
@@ -34,15 +30,20 @@ class HomeTemplate extends Component {
                                 <Typography color="textPrimary" variant="headline" component="h1" className={classes.name}>{name}</Typography>
                             </span>
                         </Paper>
-                        <Attributes 
+                        <Attributes
+                            theme={theme} 
                             position={position}
                             home={home}
                             email={email}
                             phone={phone}
                         />
                         <Divider className={classes.divider}/>
-                        <Languages programingLanguages={programingLanguages}/>
-                        <Divider className={classes.divider}/>
+                        {programingLanguages &&
+                            <div>
+                                <Languages programingLanguages={programingLanguages}/>
+                                <Divider className={classes.divider}/>
+                            </div>
+                        }
                         <Skills skills={skills}/>
                     </Paper>
                 </div>
@@ -84,7 +85,7 @@ const styles = theme => ({
         textAlign: "left",
         width: "100%",
         height: 200,
-        backgroundImage: `url(${pepe})`,
+        backgroundImage: `url(${ProfilePicture})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain"
       },
