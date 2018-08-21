@@ -18,7 +18,7 @@ export const parseRepos = data => {
       license: obj.license ? obj.license.name :'',
       language: obj.language ? obj.language : '',
       name: obj.name ? obj.name : '',
-      owner: obj.owner
+      owner: obj.owner.login
     };
   });
   return repos;

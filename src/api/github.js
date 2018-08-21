@@ -15,9 +15,13 @@ export const getUserPublicData = username => {
 };
 
 export const getUserRepos = username => {
+  const params = {
+    type: 'all'
+  }
   return axios({
     method: "GET",
-    url: `https://api.github.com/users/${username}/repos`
+    url: `https://api.github.com/users/${username}/repos`,
+    params,
   })
     .then(response => {
       return utils.parseRepos(response.data);
