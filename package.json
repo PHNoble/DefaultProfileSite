@@ -2,7 +2,6 @@
   "name": "defaultprofilesite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "paulnoble.me",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
