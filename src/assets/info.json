@@ -26,6 +26,15 @@
     ],
     "experience": [
         {
+            "title": "Lead Developer",
+            "organization": "Outlit inc.",
+            "dates": {
+                "start": "August 2017",
+                "end": "August 2018"
+            },
+            "description": "dsd"
+        },
+        {
             "title": "IT College to Corporate Intern",
             "organization": "Vanguard",
             "dates": {
