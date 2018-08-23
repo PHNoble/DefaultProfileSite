@@ -71,9 +71,10 @@ const styles = theme => ({
     },
     currentDiv: {
         padding: 5,
-        backgroundColor: 'lightblue',
+        backgroundColor: palette.primary.main,
         borderRadius: 4,
-        marginLeft: 5
+        marginLeft: 5,
+        
     },
     col: {
         display: 'flex',
