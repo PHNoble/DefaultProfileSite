@@ -75,7 +75,7 @@ const styles = theme => ({
     marginBottom: 10
   },
   currentDiv: {
-    backgroundColor: "lightblue",
+    backgroundColor: palette.primary.main,
     borderRadius: 4,
     marginLeft: 10,
     height: 20,
