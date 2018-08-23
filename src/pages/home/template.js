@@ -39,7 +39,7 @@ class HomeTemplate extends Component {
       <div className={classes.container}>
         <div className={classes.leftContainer}>
           <Paper className={classes.profilePaper}>
-            <Paper className={classes.imgNameContainer}>
+            <div className={classes.imgNameContainer}>
               <span className={classes.spanName}>
                 <Typography
                   color="textPrimary"
@@ -50,7 +50,7 @@ class HomeTemplate extends Component {
                   {name}
                 </Typography>
               </span>
-            </Paper>
+            </div>
             <Attributes
               theme={theme}
               position={position}

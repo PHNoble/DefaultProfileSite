@@ -12,7 +12,7 @@ const WorkExperience = ({classes, experience}) => {
         <Paper className={classes.contentPaper}>
             <div className={classes.grouping}>
                 <FontAwesomeIcon color={palette.primary.main} icon="briefcase" size="2x"/>
-                <Typography color="textPrimary" variant="display1" className={classes.heading} component="h2">Work Experience</Typography>
+                <Typography color="textSecondary" variant="display1" className={classes.heading} component="h2">Work Experience</Typography>
             </div>
             {
                 experience.map(exp => {
@@ -23,7 +23,7 @@ const WorkExperience = ({classes, experience}) => {
                                 <Typography color="textSecondary" variant="display1" className={classes.org} component="h3">at {exp.organization}</Typography>
                             </div>
                             <div className={classes.minorGrouping}>
-                                <FontAwesomeIcon icon="calendar-alt" className={classes.icon}/>
+                                <FontAwesomeIcon color={palette.primary.main} icon="calendar-alt" className={classes.icon}/>
                                 <Typography color="textPrimary" variant="display1" className={classes.date} component="h3">{exp.dates.start} - </Typography>
                                 {exp.dates.end && 
                                     <Typography color="textPrimary" variant="display1" className={classes.date} component="h3">{exp.dates.end}</Typography>

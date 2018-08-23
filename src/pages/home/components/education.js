@@ -23,7 +23,7 @@ const Education = ({classes, education}) => {
                                 <Typography color="textSecondary" variant="display1" className={classes.org} component="h3">at {edu.organization}</Typography>
                             </div>
                             <div className={classes.minorGrouping}>
-                                <FontAwesomeIcon icon="calendar-alt" className={classes.icon}/>
+                                <FontAwesomeIcon color={palette.primary.main} icon="calendar-alt" className={classes.icon}/>
                                 <Typography color="textPrimary" variant="display1" className={classes.date} component="h3">{edu.dates.start} - </Typography>
                                 {edu.dates.end && 
                                     <Typography color="textPrimary" variant="display1" className={classes.date} component="h3">{edu.dates.end}</Typography>
