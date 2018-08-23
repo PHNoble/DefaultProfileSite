@@ -6,22 +6,32 @@
     "github": "PHNoble",
     "phone": "(757)775-1700",
     "skills": [
+        "React/React-native",
+        "Leadership",
         "Microsoft Office",
-        "Design",
-        "Something else"
+        "Design"
+
     ],
     "programing_languages": [
         {
             "language": "Javascript",
-            "experience": 50
+            "experience": 70
         },
         {
             "language": "Java",
             "experience": 60
         },
         {
+            "language": "Python",
+            "experience": 20
+        },
+        {
             "language": "C",
             "experience": 20
+        },
+        {
+            "language": "Swift",
+            "experience": 10
         }
     ],
     "experience": [
@@ -32,11 +42,11 @@
                 "start": "August 2017",
                 "end": "August 2018"
             },
-            "description": "dsd"
+            "description": "Led a team of 5 mobile and web developers to deliver and iterate quickly (website can be found at Outlitapp.com). Unfortunately the startup ended up failing as we could not secure funding for us to continue running, but we ended up creating a product we are proud of. I'm still under an NDA for the project so no media relating to the project is available, other than the website."
         },
         {
             "title": "IT College to Corporate Intern",
-            "organization": "Vanguard",
+            "organization": "The Vanguard Group",
             "dates": {
                 "start": "May 2018",
                 "end": "July 2018"
@@ -51,6 +61,15 @@
                 "end": "August 2017"
             },
             "description": "Worked in a team of interns developing a mechanism of drug delivery for disaster relief scenarios with a remote drone and mobile application. Developed an API with node that interfaced with a mobile and webapp to command a remote drone. Technologies used: React Native and MEAN stack."
+        },
+        {
+            "title": "Research Intern",
+            "organization": "NASA, Langley",
+            "dates": {
+                "start": "December 2015",
+                "end": "May 2016"
+            },
+            "description": ""
         }
     ],
     "education": [
