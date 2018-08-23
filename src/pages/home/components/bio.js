@@ -23,7 +23,7 @@ const styles = theme => ({
     contentPaper: {
         padding: 20,
         margin: 10,
-        
+        backgroundColor: "#EDEDED"
     },
     grouping: {
         display: 'inline-flex',

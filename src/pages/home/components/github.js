@@ -66,7 +66,8 @@ const Github = ({ classes, details, repos, stats, username }) => {
 const styles = theme => ({
   contentPaper: {
     padding: 20,
-    margin: 10
+    margin: 10,
+    backgroundColor: "#EDEDED"
   },
   grouping: {
     display: "inline-flex",

@@ -4,11 +4,11 @@
             "main": "#51895E"
         },
         "secondary": {
-            "main": "#A8CDE8"
+            "main": "#657B8C"
         },
         "text": {
             "primary": "#51895E",
-            "secondary": "#A8CDE8"
+            "secondary": "#657B8C"
         }
     }
 }

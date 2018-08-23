@@ -106,7 +106,8 @@ const styles = theme => ({
   profilePaper: {
     flex: 1,
     margin: 10,
-    height: "100%"
+    height: "100%",
+    backgroundColor: "#EDEDED"
   },
   imgNameContainer: {
     position: "relative",
