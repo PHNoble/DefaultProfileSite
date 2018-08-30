@@ -100,17 +100,13 @@
     ],
     "projects": [
         {
-            "title": "Resume default template",
-            "description": "this is a resume template created for scrubs who cannot webdev"
+            "title": "EduSmart",
+            "description": "Enterprise javaFX program made to help special education teachers track students behavior in the classroom. Project deployed and delivered to over 12 different special education schools in Virginia affecting 100s of educators. Integrates with these school systems existing projects. Licensed to Centra health and more to come."
         },
         {
-            "title": "Resume default template",
-            "description": "this is a resume template created for scrubs who cannot webdev"
-        },
-        {
-            "title": "Resume default template",
-            "description": "this is a resume template created for scrubs who cannot webdev"
-        } 
+            "title": "StockHelper",
+            "description": "This project is in its early stages. We are working on developing a mobile application for iOS and Android to teach people about stocks and stock trading. We are targeting users he may not do much of their own research or don't know where to start with their research. We are in the ideation and design phase currently."
+        }
     ],
     "bio": "Hi my name is Paul Noble and I am a current Computer Science student at Virginia Tech also pursuing a minors in Entrepreneurship and New Venture Growth and Math. I am interested in entrepreneurship, mobile developement, and data science. "
 }
